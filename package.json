@@ -1,0 +1,30 @@
+{
+  "name": "fim-framework",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Victor Mesquita",
+  "license": "MIT",
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rimraf dist",
+    "coverage": "jest --coverage",
+    "precommit": "lint-staged",
+    "prettier": "prettier --single-quote --trailing-comma es5 --write \"src/**/*.ts\"",
+    "start": "ts-node",
+    "test": "jest --testMatch=**/*.test.ts",
+    "test:unit": "jest --testMatch=\"**/__tests__/*.test.(ts|tsx|js)\"",
+    "test:watch": "npm test -- --watch"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "jest": "^23.1.0",
+    "lint-staged": "^7.2.0",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^22.4.6",
+    "typescript": "^2.9.2"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "lodash": "^4.17.10"
+  }
+}
